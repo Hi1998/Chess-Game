@@ -23,7 +23,6 @@ public class ChessMan : MonoBehaviour
         controller = GameObject.FindGameObjectWithTag("GameController");
 
         SetCoords();
-
         switch(this.name)
         {
             case "black_queen":
@@ -78,5 +77,25 @@ public class ChessMan : MonoBehaviour
         y += -2.3f;
 
         this.transform.position = new Vector3(x,y,-1.0f);
+    }
+
+    public int GetXBoard()
+    {
+        return xBoard;
+    }
+
+    public int GetYBoard()
+    {
+        return yBoard;
+    }
+
+    public void SetXBoard(int x)
+    {
+        xBoard = x;
+    }
+
+    public void SetYBoard(int y)
+    {
+        yBoard = y;
     }
 }
